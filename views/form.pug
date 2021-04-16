@@ -1,0 +1,47 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' ,='' href='/css/form.css')
+  title  REGISTRATION FORM 
+form#form(action='/reg' onSubmit='return validate()' name='form' method='POST')
+  h5.title DRIVER&apos;S REGISTRATION FORM 
+  fieldset
+    input#username(type='text' name='name' placeholder='username' autocomplete='off')
+    #nameErr.error
+    legend
+      label(for='name') Name
+  fieldset
+    input#pi(type='text' name='past_incidence' placeholder='last Incidence' autocomplete='off')
+    #piErr.error
+    legend
+      label(for='Past Incidence') Past Incidence
+  fieldset
+    input.form-control(type='text' name='nin' placeholder='NIN' autocomplete='off')
+    #ninErr.error
+    legend
+      label(for='NIN') NIN
+  fieldset
+    input#bd.form-control(type='date' name='birthdate' placeholder='Birthdate' autocomplete='off')
+    #bdErr.error
+    legend
+      label(for='Birthdate') Birthdate
+  fieldset
+    input#ha.form-control(type='text' name='homeaddress' placeholder='Home Address' autocomplete='off')
+    #haErr.error
+    legend
+      label(for='Home Address') Home Address
+  fieldset
+    input#dln(type='text' name='driving_licence_no' placeholder='Driving License Number' autocomplete='on')
+    #dlnErr.error
+    legend
+      label(for='Driving License Number') Driving License Number
+  fieldset
+    input#dln(type='text' placeholder='Gender' name='gender' autocomplete='off')
+    #genderErr.error
+    legend
+      label(for='Gender') Gender
+  .actions
+    button(type='submit') Submit
+script(src='/js/formjs.js')

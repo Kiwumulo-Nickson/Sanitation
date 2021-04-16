@@ -1,0 +1,75 @@
+fieldset {
+    --typography-size: 14px;
+    --base-ratio: 4px;
+    font-family: monospace;
+    padding: 0;
+    margin: 16px;
+    border: none;
+  }
+  
+  input {
+    font-size: var(--typography-size);
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+    padding-top: calc(var(--base-ratio) * 3);
+    padding-bottom: calc(var(--base-ratio) * 2);
+    padding-left: calc(var(--base-ratio) * 3);
+    border: 1px solid #c3c3c3;
+  }
+  
+  input::placeholder {
+    opacity: 0;
+  }
+  
+  legend {
+    font-size: var(--typography-size);
+    padding: 0 var(--base-ratio);
+    margin-left: calc(2 * var(--base-ratio) + 1px);
+    transform: translateY(calc(100% + 3 * var(--base-ratio) + 1px));
+    background: transparent;
+    transition: all 0.75s ease;
+  }
+  
+  input:not(:placeholder-shown) ~ legend  {
+    color: hotpink;
+    background: white;
+    transform: translateY(50%);
+  /*   padding: 0; */ /* optional */
+  }
+  
+  label {
+    cursor: text;
+    font-size: var(--typography-size);
+    text-transform: capitalize;
+    transition: font-size 0.75s ease;
+  }
+  
+  input:not(:placeholder-shown) ~ legend > label  {
+   font-size: calc(var(--typography-size) * 0.9);
+  }
+  
+  /* Just for demo */
+  
+  form {
+   margin: 0 auto;
+   width: fit-content;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin: 8px;
+    color:darkblue
+  }
+  
+  .actions {
+    width: 100%;
+    margin: 16px;
+    text-align: justify;
+  }
+  
+  .actions > button {
+    color: darkblue;
+    width: 33%;
+    margin: 0 8px;
+  }

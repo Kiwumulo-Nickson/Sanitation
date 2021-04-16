@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet", href="/css/formcss.css">
+    <title>Document</title>
+</head>
+<body>
+  <form action="" onSubmit="return validate()"  name="form" action="/"   id="form"  method="POST" >
+    <h5 class="title">DRIVER'S REGISTRATION FORM </h5>
+      <fieldset>
+        <input id="username" type="text" placeholder="username" autocomplete="off"/>
+        <div class= "error" id="nameErr"></div>
+        <legend><label for="username">Username</label></legend>
+       </fieldset>
+        <fieldset>
+        <input id="pi" type="text" placeholder="last Incidence" autocomplete="off" />
+        <div class= "error" id="piErr"></div>
+        <legend><label for="Past Incidence">Past Incidence</label></legend>
+       </fieldset>
+        <fieldset>
+        <input type="text" class="form-control" name="nin"  placeholder="NIN" autocomplete="off"/  >
+        <div class="error "  id="ninErr"></div>
+      <legend><label for="NIN">NIN</label></legend>
+       </fieldset>
+       <fieldset>
+        <input type="text" class="form-control" id="bd"  name="birthdate" placeholder="Birthdate" autocomplete="off"/>
+        <div class="error "  id="bdErr"></div>
+        <legend><label for="Birthdate">Birthdate</label></legend>
+       </fieldset>
+        <fieldset>
+        <input type="text" class="form-control" id="ha"  name="homeaddress" placeholder="Home Address" autocomplete="off"/>
+        <div class="error "  id="haErr"></div>
+        <legend><label for="Home Address">Home Address</label></legend>
+       </fieldset>
+        <fieldset>
+        <input id="dln" type="text" placeholder="Driving License Number" autocomplete="on" />
+        <div class= "error" id="dlnErr"></div>
+        <legend><label for="Driving License Number">Driving License Number</label></legend>
+       </fieldset>
+      <fieldset>
+        <input id="dln" type="text" placeholder="Gender" autocomplete="off" />
+        <div class= "error" id="genderErr"></div>
+        <legend><label for="Gender">Gender</label></legend>
+         </fieldset>
+        <div class="actions">
+          <button type="submit" >Submit</button>
+          <!-- <button type="reset">Reset</submit> -->
+        </div>
+      </form>
+</body>
+<script src="/js/formjs.js"></script>
+</html>
