@@ -18,7 +18,7 @@ form#form(action='/reg' onSubmit='return validate()' name='form' method='POST')
     legend
       label(for='Past Incidence') Past Incidence
   fieldset
-    input.form-control(type='text' name='nin' placeholder='NIN' autocomplete='off')
+    input#nin.form-control(type='text' name='nin' placeholder='NIN' autocomplete='off')
     #ninErr.error
     legend
       label(for='NIN') NIN
@@ -38,7 +38,7 @@ form#form(action='/reg' onSubmit='return validate()' name='form' method='POST')
     legend
       label(for='Driving License Number') Driving License Number
   fieldset
-    input#dln(type='text' placeholder='Gender' name='gender' autocomplete='off')
+    input#gender(type='text' placeholder='Gender' name='gender' autocomplete='off')
     #genderErr.error
     legend
       label(for='Gender') Gender

@@ -2,11 +2,17 @@
 const regform = document.getElementById('form');
 const uname=document.getElementById('username');
 const upast=document.getElementById('pi');
-const uemail=document.getElementById('email');
+const unin=document.getElementById('nin');
+const uha=document.getElementById('ha');
+const udln=document.getElementById('dln');
+const ugender=document.getElementById('gender');
 //Acessing errors
 const nameError= document.getElementById ('nameErr')
 const pastError= document.getElementById ('piErr')
-const emailError= document.getElementById ('emailErr')
+const ninError= document.getElementById ('ninErr')
+const haError= document.getElementById ('haErr')
+const dlnError= document.getElementById ('dlnErr')
+const genderError= document.getElementById ('genderErr')
  // Add eventlistener to the form
  regform.addEventListener('submit', (event)=>{
     // event.preventDefault();
@@ -30,48 +36,61 @@ const validate = ()=>{
         uname.style.border='1px solid green';
     
     };
+    let text = /^[A-Za-z]+$/;
+    // let Regex5=/^\d{1}$/;
+    if(upast.value==''){
+       pastError.innerHTML='Field Required';
+       pastError.style.color='red';
+       upast.style.border='1px solid red';
+       return false
+   }
+   else if(!upast.value.match(text)){
+       pastError.innerHTML='Ward No should be one digit ';
+       pastError.style.color='red';
+       upast.style.border='1px solid red';
+       return false
+   }
+   else if (upast.value.match(text)){
+    upast.style.border='1px solid green';
 
+};
 
-//     let alphanumeric = /^(?=.*[a-zA-Z])(?=.*[0-9])[A-Za-z0-9]+$/;
-//     if(upass.value==''){
-//         passError.innerHTML='Field Required';
-//         passError.style.color='red';
-//         upass.style.border='1px solid red';
-//         return false
-//     }
-//     else if(!upass.value.match(alphanumeric)){
-//         passError.innerHTML='Username  should be a mixture of numbers & letters';
-//         passError.style.color='red';
-//         upass.style.border='1px solid red';
-//         return false
+    let alphanumeric = /^(?=.*[a-zA-Z])(?=.*[0-13])[A-Za-z0-9]+$/;
+    if(unin.value==''){
+       ninError.innerHTML='Field Required';
+       ninError.style.color='red';
+        unin.style.border='1px solid red';
+        return false
+    }
+    else if(!unin.value.match(alphanumeric)){
+       ninError.innerHTML='Username  should be a mixture of numbers & letters';
+       ninError.style.color='red';
+        unin.style.border='1px solid red';
+        return false
         
-//     }
-//     else if (upass.value.match(alphanumeric)){
-//         upass.style.border='1px solid green';
+    }
+    else if (unin.value.match(alphanumeric)){
+        unin.style.border='1px solid green';
     
-//     };
-//     // let text = /^[A-Za-z]+$/
-//     let Regex5=/^\d{1}$/;
-//     if(uemail.value==''){
-//        emailError.innerHTML='Field Required';
-//        emailError.style.color='red';
-//        uemail.style.border='1px solid red';
+    };
+//     let text = /^[A-Za-z]+$/;
+//     // let Regex5=/^\d{1}$/;
+//     if(upast.value==''){
+//        pastError.innerHTML='Field Required';
+//        pastError.style.color='red';
+//        upast.style.border='1px solid red';
 //        return false
 //    }
-//    else if(!uemail.value.match(Regex5)){
-//        emailError.innerHTML='Ward No should be one digit ';
-//        emailError.style.color='red';
-//        uemail.style.border='1px solid red';
+//    else if(!upast.value.match(text)){
+//        pastError.innerHTML='Ward No should be one digit ';
+//        pastError.style.color='red';
+//        upast.style.border='1px solid red';
 //        return false
 //    }
-//    else if (uemail.value.match(Regex5)){
-//     uemail.style.border='1px solid green';
+//    else if (upast.value.match(text)){
+//     upast.style.border='1px solid green';
 
 // };
-
-
-
-
 
 }
 
