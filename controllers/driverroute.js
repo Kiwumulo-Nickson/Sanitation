@@ -1,22 +1,22 @@
 const express =require ("express");
 const router= express.Router();
-const Reg = require("../models/Reg");
+const Driver = require("../models/Driver");
 
-router.get("/reg", (req, res) => {
+router.get("/dr", (req, res) => {
     res.render("driver");
   });
-  
-  router.post("/reg", async(req, res) => {
+
+  router.post("/dr", async(req, res) => {
     try {
-      let up = Reg(req.body);
+      let up = Driver(req.body);
       await up.save();
       console.log("save was sucessful")
-      res.redirect("/reg");
+      res.redirect("/clist");
     } catch(err) {
       console.log(err);
       res.status(400).send("Registration wasnot succesful");
     }
   });
 
+
   module.exports = router;
-  

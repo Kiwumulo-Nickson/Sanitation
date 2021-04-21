@@ -13,7 +13,7 @@ head
         h1.text-center.mb-3
           i.fas.fa-user-plus
           |  Driver&apos;s Regstration Form
-        form(action='/reg' onSubmit='return validate()' name='form' method='POST')
+        form#form(action='/dr' onSubmit='return validate()' name='form' method='POST')
           .form-group
             label(for='name')  Name
             input#username.form-control(type='name' name='name' placeholder='Enter Name')
@@ -31,7 +31,7 @@ head
             input#bd.form-control(type='date' name='birthdate' placeholder='Birthdate')
             #bdErr.error
           .form-group
-            label(for='home_address') Driving License Number
+            label(for='driving license Number') Driving License Number
             input#dln.form-control(type='text' name='driving_licence_no' placeholder=' driving_license')
             #dlnErr.error
           .form-group
@@ -50,4 +50,4 @@ head
 script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
 script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js')
 script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js')
-script(src='/js/form.js')
+script(src='/js/driver.js')

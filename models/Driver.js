@@ -1,5 +1,5 @@
 const mongoose= require("mongoose");
-const regschema= new mongoose.Schema ({
+const drschema= new mongoose.Schema ({
 
 name:{
    type:String 
@@ -25,4 +25,4 @@ gender: [{type:String}],
 
 })
 
-module.exports = mongoose.model("Reg", regschema);
+module.exports = mongoose.model("Driver", drschema);
