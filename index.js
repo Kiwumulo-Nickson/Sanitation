@@ -3,15 +3,18 @@ const app = express();
 const bodyParser= require('body-parser');
 const mongoose= require('mongoose');
 
-const Register = require('./models/Register')
+const Signup = require('./models/Signup')
 const Reg = require('./models/Reg')
+const Client = require('./models/Client')
+const Conductor = require('./models/Conductor')
 
 require('dotenv').config(); 
 const path=require('path');
 const regRoute=require('./controllers/regroute');
 const loginRoute=require('./controllers/loginroute');
 const registerRoute=require('./controllers/registerroute');
-
+const clientRoute=require('./controllers/clientroute');
+const conductorRoute=require('./controllers/conductorroute');
 //Setting up db
 mongoose.connect(process.env.DATABASE, {
     useNewUrlParser: true,
@@ -37,7 +40,9 @@ app.use(express.static('public'));
 //using imported routes
 app.use('/reg',regRoute);
 app.use('/login',loginRoute);
-app.use('/regi',registerRoute);
+app.use('/',registerRoute);
+app.use('/',clientRoute);
+app.use('/',conductorRoute);
 
 // Setting up my server
 app.get('/',(req,res) => res.send('Happy Coding'));

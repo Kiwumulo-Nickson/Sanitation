@@ -4,20 +4,20 @@ const regschema= new mongoose.Schema ({
 name:{
    type:String 
 },
-past_incidence:{
+nin:{
     type:String
 },
-nin:{
+home_address:{
     type:String
 },
 birthdate:{
     type:String
 },
-homeaddress:{
-    type:String
-},
 driving_licence_no:{
     type:Number
+},
+past_incidence:{
+    type:String
 },
 gender:{
     type:String

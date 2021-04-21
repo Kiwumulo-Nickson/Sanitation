@@ -15,4 +15,4 @@ password :{
 }
 })
 
-module.exports = mongoose.model("Register", regischema);
+module.exports = mongoose.model("Signup", regischema);
