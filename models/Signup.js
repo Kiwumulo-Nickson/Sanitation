@@ -1,4 +1,6 @@
 const mongoose= require("mongoose");
+const passportLocalMongoose = require('passport-local-mongoose');
+
 const regischema= new mongoose.Schema ({
 firstname :{
     type:String
@@ -15,4 +17,5 @@ password :{
 }
 })
 
+regischema.plugin(passportLocalMongoose);
 module.exports = mongoose.model("Signup", regischema);

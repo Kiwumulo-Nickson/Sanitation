@@ -24,20 +24,22 @@ regform.addEventListener('submit', (event)=>{
 });
 
 const validate = ()=>{
-    let nameRegex = /^[A-Za-z]+$/;
+    // let nameRegex = /^[A-Za-z]+$/;
     if(uname.value==''){
         nameError.innerHTML='Field Required';
         nameError.style.color='red';
         uname.style.border='1px solid red';
         return false
     }
-    else if (!uname.value.match(nameRegex)){
-        nameError.innerHTML='Names should be written in letter format only';
-        nameError.style.color='red';
-        uname.style.border='1px solid red';
-        return false
-    }
-    else if (uname.value.match(nameRegex)){
+    // else if (!uname.value.match(nameRegex)){
+    //     nameError.innerHTML='Names should be written in letter format only';
+    //     nameError.style.color='red';
+    //     uname.style.border='1px solid red';
+    //     return false
+    // }
+    else if (!uname.value==''){
+        nameError.innerHTML='';
+        nameError.style.color='';
         uname.style.border='1px solid green';
     
     };
@@ -75,18 +77,6 @@ const validate = ()=>{
     
     };
 
-    if(uha.value==''){
-        haError.innerHTML='Field Required';
-        haError.style.color='red';
-        uha.style.border='1px solid red';
-        return false
-    }
-    else if (!uha.value==''){
-        haError.innerHTML='';
-        haError.style.color='';
-        uha.style.border='1px solid green';
-    
-    };
 
     if(ubd.value==''){
         bdError.innerHTML='Field Required';

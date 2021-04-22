@@ -13,19 +13,23 @@ head
         h1.text-center.mb-3
           i.fas.fa-user-plus
           |  Signup
-        form(action='/regi' method='POST')
+        form#form(action='/regi' onSubmit='return validate()' method='POST')
           .form-group
             label(for='name') First Name
             input#name.form-control(type='name' name='firstname' placeholder='Enter Name')
+            #nameErr.error
           .form-group
             label(for='text') Last Name
-            input#email.form-control(type='text' name='lastname' placeholder='Enter Last Name')
+            input#ln.form-control(type='text' name='lastname' placeholder='Enter Last Name')
+            #lnErr.error
           .form-group
-            label(for='password') User Name
-            input#Username.form-control(type='Username' name='username' placeholder=' Username')
+            label(for='password') Username
+            input#username.form-control(type='Username' name='username' placeholder=' Username')
+            #unameErr.error
           .form-group
             label(for='Password') Create Password
-            input#password.form-control(type='password' name='password' placeholder='Create Password')
+            input#pass.form-control(type='password' name='password' placeholder='Create Password')
+            #passErr.error
           button.btn.btn-primary.btn-block(type='submit')
             | Signup
         p.lead.mt-4
@@ -34,3 +38,4 @@ head
 script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
 script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js')
 script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js')
+script(src='/js/signup.js')
