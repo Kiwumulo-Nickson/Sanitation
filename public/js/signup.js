@@ -5,7 +5,7 @@ const uln = document.getElementById('ln');
 const usn = document.getElementById('username');
 const upass = document.getElementById('pass');
 
-//Accessing errors
+//Accessing error
 const nameError = document.getElementById('nameErr');
 const ulnError = document.getElementById('lnErr');
 const usnError = document.getElementById('unameErr');
