@@ -1,5 +1,5 @@
 # About the  Sanitation /Stay Clean Initiative  Project.
-The Sanitation Project  is   a gabagge collection management system.
+The Sanitation Project  is   a garbage collection management system.
 This platform simplifies or connects  gabagge collecters to  available  clients .
 
 ## Project  Setup / Installation
