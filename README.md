@@ -4,10 +4,10 @@ This platform simplifies or connects  gabagge collecters to  available  clients 
 
 ## Project  Setup / Installation
 1. Clone the repository:
->
+>  https://github.com/Kiwumulo-Nickson/Sanitation.git
 
 2. Checkout to the Master Branch.
->
+>  git checkout master
  
 3. Install dependencies with npm :
 
