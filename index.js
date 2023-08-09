@@ -28,7 +28,7 @@ const conductorRoute=require('./controllers/conductorroute');
 const driverRoute=require('./controllers/driverroute');
 
 //Setting up db
-mongoose.connect(process.env.DATABASE, {
+mongoose.connect(process.env.DBCONNECTION, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
@@ -61,7 +61,7 @@ passport.deserializeUser(Signup.deserializeUser());
 
 //using imported routes
 app.use('/',regRoute);
-app.use('/login',loginRoute);
+app.use('/',loginRoute);
 app.use('/',registerRoute);
 app.use('/',clientRoute);
 app.use('/',conductorRoute);
@@ -91,8 +91,7 @@ app.post('/logout',(req,res)=>{
   
   
   // Setting up my server
-app.get('/',(req,res) => res.send('Happy Coding'));
+// app.get('/',(req,res) => res.send('Happy Coding'));
 
-app.listen(3000, () => console.log('Listening on port 3000'));
-
+app.listen(3001, () => console.log('Listening on port 3001'));
 //
