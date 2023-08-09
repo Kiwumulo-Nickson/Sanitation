@@ -8,8 +8,11 @@ This platform simplifies or connects  gabagge collecters to  available  clients 
 
 2. Checkout to the Master Branch.
 >  git checkout master
+
+2a. Pull the recent changes .
+>  git pull
  
-3. Install dependencies with npm :
+2b. Install dependencies with npm :
 
     > ` npm install`
 
